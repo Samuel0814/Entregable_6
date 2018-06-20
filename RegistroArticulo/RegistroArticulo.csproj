@@ -52,10 +52,12 @@
   <ItemGroup>
     <Compile Include="BLL\ArticulosBLL.cs" />
     <Compile Include="BLL\CotizacionBLL.cs" />
+    <Compile Include="BLL\PersonasBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Articulos.cs" />
     <Compile Include="Entidades\Cotizaciones.cs" />
     <Compile Include="Entidades\CotizacionesDetalle.cs" />
+    <Compile Include="Entidades\Personas.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
