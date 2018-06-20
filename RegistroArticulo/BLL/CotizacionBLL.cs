@@ -11,13 +11,14 @@ namespace RegistroArticulo.BLL
 {
     public class CotizacionBLL
     {
-        public static bool Guardar(Articulos articulo)
+        static int IDs = 0;
+        public static bool Guardar(Cotizaciones cotizacion)
         {
             bool paso = false;
-            Contexto contex = new Contexto();
             try
             {
-                if (contex.articulo.Add(articulo) != null)
+                Contexto contex = new Contexto();
+                if (contex.Cotizar.Add(cotizacion) != null)
                 {
                     contex.SaveChanges();
                     paso = true;
@@ -29,22 +30,63 @@ namespace RegistroArticulo.BLL
 
                 throw;
             }
+            return paso;
+        }
+        private static void BuscarID(Cotizaciones cotizaciones)
+        {
+            IDs = cotizaciones.ID;
 
+        }
+        public static int RetornarID()
+        {
+            return IDs;
+        }
+        public static int calcularMonto(decimal cantidad, decimal precio)
+        {
+            int resultado;
+            resultado = Convert.ToInt32(cantidad) * Convert.ToInt32(precio);
+
+            return resultado;
+        }
+
+
+        public static bool Eliminar(int ID)
+        {
+            bool paso = false;
+            try
+            {
+                Contexto contex = new Contexto();
+                var cotizaciones = contex.Cotizar.Find(ID);
+                contex.Detalle.RemoveRange(contex.Detalle.Where(x => x.CotizacionesID == cotizaciones.ID));
+                contex.Entry(cotizaciones).State = System.Data.Entity.EntityState.Deleted;
+                if (contex.SaveChanges() > 0)
+                {
+
+                    paso = true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
             return paso;
         }
 
-        public static bool Eliminar(int id)
+        public static bool Modificar(Cotizaciones cotizaciones)
         {
             bool paso = false;
-            Contexto contex = new Contexto();
+
             try
             {
-                var eliminar = contex.articulo.Find(id);
-                contex.Entry(eliminar).State = EntityState.Deleted;
+                Contexto contex = new Contexto();
+                contex.Entry(cotizaciones).State = System.Data.Entity.EntityState.Modified;
                 if (contex.SaveChanges() > 0)
                 {
                     paso = true;
                 }
+
             }
             catch (Exception)
             {
@@ -53,35 +95,41 @@ namespace RegistroArticulo.BLL
             }
             return paso;
         }
-
-        public static bool Modificar(Articulos articulo)
+        public static int CotisarMonto(List<CotizacionesDetalle> detalle)
         {
-            bool paso = false;
-            Contexto contex = new Contexto();
+            int monto = 0;
+            foreach (var cotisar in detalle)
+            {
+                monto += (Convert.ToInt32(cotisar.Precio) * cotisar.Cantidad);
+            }
+
+            return monto;
+        }
+        public static Cotizaciones Buscar(int ID)
+        {
+            Cotizaciones cotizaciones = new Cotizaciones();
             try
             {
-                contex.Entry(articulo).State = EntityState.Modified;
-                if (contex.SaveChanges() > 0)
-                {
-                    paso = true;
-                }
+                Contexto contex = new Contexto();
+                cotizaciones = contex.Cotizar.Find(ID);
+
             }
             catch (Exception)
             {
 
                 throw;
             }
-            return paso;
+            return cotizaciones;
         }
 
-        public static Articulos Buscar(int id)
+        public static List<Cotizaciones> GetList(Expression<Func<Cotizaciones, bool>> cotizacione)
         {
-
-            Contexto contex = new Contexto();
-            Articulos articulo = new Articulos();
+            List<Cotizaciones> cotizaciones = new List<Cotizaciones>();
             try
             {
-                articulo = contex.articulo.Find(id);
+
+                Contexto contex = new Contexto();
+                cotizaciones = contex.Cotizar.Where(cotizacione).ToList();
 
             }
             catch (Exception)
@@ -89,25 +137,7 @@ namespace RegistroArticulo.BLL
 
                 throw;
             }
-            return articulo;
-        }
-
-        public static List<Articulos> GetList(Expression<Func<Articulos, bool>> articulo)
-        {
-            List<Articulos> articulos = new List<Articulos>();
-            Contexto contex = new Contexto();
-
-            try
-            {
-                articulos = contex.articulo.Where(articulo).ToList();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-            return articulos;
+            return cotizaciones;
         }
     }
 }

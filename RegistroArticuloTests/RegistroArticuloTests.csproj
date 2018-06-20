@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BLL\ArticulosBLLTests.cs" />
     <Compile Include="BLL\CotizacionBLLTests.cs" />
+    <Compile Include="BLL\PersonasBLLTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

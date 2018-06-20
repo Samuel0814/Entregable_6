@@ -7,18 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace RegistroArticulo
+namespace RegistroArticulo.UI.Consultas
 {
-    public partial class MainForm : Form
+    public partial class cCotizaciones : Form
     {
-        public MainForm()
+        public cCotizaciones()
         {
             InitializeComponent();
-        }
-
-        private void cotizacionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
