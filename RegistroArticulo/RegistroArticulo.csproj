@@ -107,7 +107,20 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\cCotizaciones.resx">
+      <DependentUpon>cCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cPersonas.resx">
+      <DependentUpon>cPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\rArticulos.resx">
+      <DependentUpon>rArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\rPersonas.resx">
+      <DependentUpon>rPersonas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -125,6 +138,13 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\Scripts\Entregable6Db.sql" />
+    <None Include="Resources\icons8_Create_32.png" />
+    <None Include="Resources\icons8_Save_All_32.png" />
+    <None Include="Resources\icons8_Delete_File_32.png" />
+    <None Include="Resources\icons8_Query_32.png" />
+    <None Include="Resources\icons8_More_Details_32.png" />
+    <None Include="Resources\icons8_Add_New_32.png" />
+    <None Include="Resources\icons8_Search_Property_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
