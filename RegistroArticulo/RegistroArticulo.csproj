@@ -109,6 +109,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\cArticulos.resx">
+      <DependentUpon>cArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cCotizaciones.resx">
       <DependentUpon>cCotizaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +141,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\Scripts\Entregable6Db.sql" />
+    <None Include="Resources\icons8_Print_32.png" />
     <None Include="Resources\icons8_Create_32.png" />
     <None Include="Resources\icons8_Save_All_32.png" />
     <None Include="Resources\icons8_Delete_File_32.png" />
