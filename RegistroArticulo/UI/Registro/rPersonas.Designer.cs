@@ -104,6 +104,7 @@
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
@@ -116,6 +117,7 @@
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -128,6 +130,7 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // PersonaIdnumericUpDown
             // 
@@ -147,7 +150,7 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.button1_Click);
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // NombretextBox
             // 
@@ -206,6 +209,7 @@
             this.Controls.Add(this.label1);
             this.Name = "rPersonas";
             this.Text = "Registro de Personas";
+            this.Load += new System.EventHandler(this.rPersonas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PersonaIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
