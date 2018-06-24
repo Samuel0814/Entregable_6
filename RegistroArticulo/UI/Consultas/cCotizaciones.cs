@@ -141,5 +141,14 @@ namespace RegistroArticulo.UI.Consultas
         {
 
         }
+
+        private void Buscarbutton_Click_1(object sender, EventArgs e)
+        {
+            var cotizacion = BLL.CotizacionBLL.Buscar(Convert.ToInt32(IDnumericUpDown.Value));
+            ComentariotextBox.Text = cotizacion.Comentario;
+            MontotextBox.Text = cotizacion.Monto.ToString();
+            FechadateTimePicker.Value = cotizacion.Fecha;
+            DetalledataGridView.DataSource = cotizacion.CotizacionDetalle;
+        }
     }
 }

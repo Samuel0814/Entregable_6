@@ -62,7 +62,7 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetallenumericUpDown)).BeginInit();
@@ -81,6 +81,7 @@
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(228, 9);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
@@ -381,17 +382,18 @@
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
-            // button1
+            // Buscarbutton
             // 
-            this.button1.Image = global::RegistroArticulo.Properties.Resources.icons8_Search_Property_32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(436, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 46);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Search_Property_32;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(436, 12);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(84, 46);
+            this.Buscarbutton.TabIndex = 1;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
             // 
             // cCotizaciones
             // 
@@ -425,7 +427,7 @@
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label1);
             this.Name = "cCotizaciones";
             this.Text = "Cotizaciones";
@@ -443,7 +445,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;

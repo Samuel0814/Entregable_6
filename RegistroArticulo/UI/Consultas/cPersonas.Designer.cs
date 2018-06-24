@@ -105,6 +105,7 @@
             // 
             // HastadateTimePicker
             // 
+            this.HastadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.HastadateTimePicker.Location = new System.Drawing.Point(273, 11);
             this.HastadateTimePicker.Name = "HastadateTimePicker";
@@ -113,6 +114,8 @@
             // 
             // DesdedateTimePicker
             // 
+            this.DesdedateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DesdedateTimePicker.Location = new System.Drawing.Point(53, 11);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(150, 20);
