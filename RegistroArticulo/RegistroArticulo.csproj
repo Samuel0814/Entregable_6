@@ -141,6 +141,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\Scripts\Entregable6Db.sql" />
+    <None Include="Resources\SARD-400x200.png" />
     <None Include="Resources\icons8_Print_32.png" />
     <None Include="Resources\icons8_Create_32.png" />
     <None Include="Resources\icons8_Save_All_32.png" />
