@@ -40,17 +40,35 @@ namespace RegistroArticulo.UI.Registro
         }
         private bool Validar()
         {
-            bool HayErrores = false;
+            bool HayErrores = true;
             //todo: quitar los mensajes de los errores que ya no estan.
 
             //todo: Validar que el nombre no se duplique
+            
+            if (String.IsNullOrWhiteSpace(NombretextBox.Text))
+            {
+                MyerrorProvider.SetError(NombretextBox, 
+                    "No debes dejar este campo vacio");
+                HayErrores = false;
+            }
+            if (String.IsNullOrWhiteSpace(DirecciontextBox.Text))
+            {
+                MyerrorProvider.SetError(DirecciontextBox,
+                    "No debe dejarlo el campo en vacio");
+                HayErrores = false;
+            }
+            if (String.IsNullOrWhiteSpace(CedulamaskedTextBox.Text))
+            {
+                MyerrorProvider.SetError(CedulamaskedTextBox, 
+                    "No debe dejar el campo en vacio");
+                HayErrores = false;
+            }
             if (String.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text))
             {
                 MyerrorProvider.SetError(TelefonomaskedTextBox,
                     "No debes dejar el nombre vacio");
-                HayErrores = true;
+                HayErrores = false;
             }
-
             //todo: validar demas campos
             return HayErrores;
         }
@@ -82,7 +100,7 @@ namespace RegistroArticulo.UI.Registro
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Personas persona;
-            bool Paso = false;
+            bool HayErrores = true;
 
             if (!Validar())
             {
@@ -95,13 +113,13 @@ namespace RegistroArticulo.UI.Registro
 
             //Determinar si es Guardar o Modificar
             if (PersonaIdnumericUpDown.Value == 0)
-                Paso = BLL.PersonasBLL.Guardar(persona);
+                HayErrores = BLL.PersonasBLL.Guardar(persona);
             else
                 //todo: validar que exista.
-                Paso = BLL.PersonasBLL.Modificar(persona);
+                HayErrores = BLL.PersonasBLL.Modificar(persona);
 
             //Informar el resultado
-            if (Paso)
+            if (HayErrores)
                 MessageBox.Show("Guardado!!", "Exito",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             else

@@ -99,5 +99,10 @@ namespace RegistroArticulo.UI.Registro
         {
 
         }
+
+        private void FechadateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

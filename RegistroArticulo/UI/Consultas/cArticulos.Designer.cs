@@ -194,6 +194,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "cArticulos";
             this.Text = "cArticulos";
+            this.Load += new System.EventHandler(this.cArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

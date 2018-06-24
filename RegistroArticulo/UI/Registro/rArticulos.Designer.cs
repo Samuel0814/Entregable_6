@@ -39,11 +39,13 @@
             this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ExistencianumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CantidadCotizzadanumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).BeginInit();
@@ -57,7 +59,7 @@
             this.label1.Location = new System.Drawing.Point(34, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Articulo ID";
             // 
             // label2
@@ -66,16 +68,16 @@
             this.label2.Location = new System.Drawing.Point(34, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 13;
             this.label2.Text = "Precio";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 107);
+            this.label3.Location = new System.Drawing.Point(34, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 12;
             this.label3.Text = "Descripcion";
             // 
             // ArticuloIdnumericUpDown
@@ -83,7 +85,7 @@
             this.ArticuloIdnumericUpDown.Location = new System.Drawing.Point(139, 34);
             this.ArticuloIdnumericUpDown.Name = "ArticuloIdnumericUpDown";
             this.ArticuloIdnumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.ArticuloIdnumericUpDown.TabIndex = 8;
+            this.ArticuloIdnumericUpDown.TabIndex = 0;
             // 
             // label5
             // 
@@ -91,7 +93,7 @@
             this.label5.Location = new System.Drawing.Point(34, 277);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 14;
             this.label5.Text = "Existencia";
             // 
             // label6
@@ -100,37 +102,41 @@
             this.label6.Location = new System.Drawing.Point(34, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 13);
-            this.label6.TabIndex = 11;
+            this.label6.TabIndex = 15;
             this.label6.Text = "Cantidad Cotizada";
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(139, 107);
+            this.DescripciontextBox.Location = new System.Drawing.Point(139, 133);
             this.DescripciontextBox.Multiline = true;
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(221, 92);
-            this.DescripciontextBox.TabIndex = 12;
+            this.DescripciontextBox.Size = new System.Drawing.Size(221, 66);
+            this.DescripciontextBox.TabIndex = 2;
             // 
             // PrecionumericUpDown
             // 
             this.PrecionumericUpDown.Location = new System.Drawing.Point(139, 221);
             this.PrecionumericUpDown.Name = "PrecionumericUpDown";
             this.PrecionumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.PrecionumericUpDown.TabIndex = 13;
+            this.PrecionumericUpDown.TabIndex = 3;
             // 
             // ExistencianumericUpDown
             // 
             this.ExistencianumericUpDown.Location = new System.Drawing.Point(139, 270);
             this.ExistencianumericUpDown.Name = "ExistencianumericUpDown";
             this.ExistencianumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.ExistencianumericUpDown.TabIndex = 14;
+            this.ExistencianumericUpDown.TabIndex = 4;
             // 
             // CantidadCotizzadanumericUpDown
             // 
             this.CantidadCotizzadanumericUpDown.Location = new System.Drawing.Point(139, 313);
             this.CantidadCotizzadanumericUpDown.Name = "CantidadCotizzadanumericUpDown";
             this.CantidadCotizzadanumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.CantidadCotizzadanumericUpDown.TabIndex = 15;
+            this.CantidadCotizzadanumericUpDown.TabIndex = 5;
+            // 
+            // MyerrorProvider
+            // 
+            this.MyerrorProvider.ContainerControl = this;
             // 
             // Eliminarbutton
             // 
@@ -139,7 +145,7 @@
             this.Eliminarbutton.Location = new System.Drawing.Point(276, 372);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(84, 54);
-            this.Eliminarbutton.TabIndex = 7;
+            this.Eliminarbutton.TabIndex = 9;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
@@ -152,7 +158,7 @@
             this.Guardarbutton.Location = new System.Drawing.Point(156, 372);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(94, 54);
-            this.Guardarbutton.TabIndex = 6;
+            this.Guardarbutton.TabIndex = 8;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
@@ -165,7 +171,7 @@
             this.Nuevobutton.Location = new System.Drawing.Point(37, 372);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(94, 54);
-            this.Nuevobutton.TabIndex = 5;
+            this.Nuevobutton.TabIndex = 7;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevobutton.UseVisualStyleBackColor = true;
@@ -178,21 +184,38 @@
             this.Buscarbutton.Location = new System.Drawing.Point(285, 34);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 54);
-            this.Buscarbutton.TabIndex = 4;
+            this.Buscarbutton.TabIndex = 6;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // MyerrorProvider
+            // label4
             // 
-            this.MyerrorProvider.ContainerControl = this;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Fecha";
+            // 
+            // FechadateTimePicker
+            // 
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(139, 78);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(120, 20);
+            this.FechadateTimePicker.TabIndex = 1;
+            this.FechadateTimePicker.ValueChanged += new System.EventHandler(this.FechadateTimePicker_ValueChanged);
             // 
             // rArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 450);
+            this.Controls.Add(this.FechadateTimePicker);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.CantidadCotizzadanumericUpDown);
             this.Controls.Add(this.ExistencianumericUpDown);
             this.Controls.Add(this.PrecionumericUpDown);
@@ -237,5 +260,7 @@
         private System.Windows.Forms.NumericUpDown ExistencianumericUpDown;
         private System.Windows.Forms.NumericUpDown CantidadCotizzadanumericUpDown;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
     }
 }

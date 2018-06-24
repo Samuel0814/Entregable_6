@@ -29,28 +29,33 @@ namespace RegistroArticulo.UI.Consultas
                 case 0://ID
                     id = Convert.ToInt32(CriteriotextBox.Text);
                     filtro = x => x.PersonasId == id
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
                 case 1:// nombre
                     filtro = x => x.Nombres.Contains(CriteriotextBox.Text)
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
                 case 2:// cedula
                     filtro = x => x.Cedula.Equals(CriteriotextBox.Text)
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
                 case 3:// direccion
                     filtro = x => x.Direccion.Contains(CriteriotextBox.Text)
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
                 case 4://telefono
                     filtro = x => x.Telefono.Equals(CriteriotextBox.Text)
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
             }
 
 
             ConsultadataGridView.DataSource = BLL.PersonasBLL.GetList(filtro);
+        }
+
+        private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

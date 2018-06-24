@@ -29,28 +29,33 @@ namespace RegistroArticulo.UI.Consultas
                 case 0://ID
                     id = Convert.ToInt32(CriteriotextBox.Text);
                     filtro = x => x.ArticuloID == id
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
                 case 1:// Descripcion
                     filtro = x => x.Descripcion.Contains(CriteriotextBox.Text)
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
                 case 2:// Precio
                     filtro = x => x.Precio.Equals(CriteriotextBox.Text)
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
                 case 3:// Existencia
                     filtro = x => x.Existencia.Equals(CriteriotextBox.Text)
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
                 case 4://CantidadCotizada
                     filtro = x => x.CantidadCotizada.Equals(CriteriotextBox.Text)
-                    && (DesdedateTimePicker.Value <= HastadateTimePicker.Value);
+                    && (x.Fecha >= DesdedateTimePicker.Value && x.Fecha <= HastadateTimePicker.Value);
                     break;
             }
 
 
             ConsultadataGridView.DataSource = BLL.ArticulosBLL.GetList(filtro);
+        }
+
+        private void cArticulos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
