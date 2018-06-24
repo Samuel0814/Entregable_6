@@ -77,5 +77,27 @@ namespace RegistroArticulo.UI.Registro
 
             return articulo;
         }
+
+        private bool Validar()
+        {
+            bool HayErrores = false;
+            //todo: quitar los mensajes de los errores que ya no estan.
+
+            //todo: Validar que el nombre no se duplique
+            if (String.IsNullOrWhiteSpace(DescripciontextBox.Text))
+            {
+                MyerrorProvider.SetError(DescripciontextBox,
+                    "No debes dejar el nombre vacio");
+                HayErrores = true;
+            }
+
+            //todo: validar demas campos
+            return HayErrores;
+        }
+
+        private void rArticulos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
