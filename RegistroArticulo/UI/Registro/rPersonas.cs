@@ -15,5 +15,10 @@ namespace RegistroArticulo.UI.Registro
         {
             InitializeComponent();
         }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

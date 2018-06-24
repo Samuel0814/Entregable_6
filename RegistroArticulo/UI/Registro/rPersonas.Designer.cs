@@ -35,16 +35,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Nuevobutton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.PersonaIdnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.NombretextBox = new System.Windows.Forms.TextBox();
+            this.DirecciontextBox = new System.Windows.Forms.TextBox();
             this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.CedulamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PersonaIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,64 +105,65 @@
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Guardarbutton
             // 
-            this.button3.Image = global::RegistroArticulo.Properties.Resources.icons8_Save_All_32;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(130, 263);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 40);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Guardar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Save_All_32;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardarbutton.Location = new System.Drawing.Point(130, 263);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(84, 40);
+            this.Guardarbutton.TabIndex = 7;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Eliminarbutton
             // 
-            this.button4.Image = global::RegistroArticulo.Properties.Resources.icons8_Delete_File_32;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(252, 263);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 40);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Eliminar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Delete_File_32;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Eliminarbutton.Location = new System.Drawing.Point(252, 263);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(84, 40);
+            this.Eliminarbutton.TabIndex = 8;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // PersonaIdnumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(94, 36);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 9;
+            this.PersonaIdnumericUpDown.Location = new System.Drawing.Point(94, 36);
+            this.PersonaIdnumericUpDown.Name = "PersonaIdnumericUpDown";
+            this.PersonaIdnumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.PersonaIdnumericUpDown.TabIndex = 9;
             // 
-            // button1
+            // Buscarbutton
             // 
-            this.button1.Image = global::RegistroArticulo.Properties.Resources.icons8_Search_Property_32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(252, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 36);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Search_Property_32;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(252, 36);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(84, 36);
+            this.Buscarbutton.TabIndex = 5;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // NombretextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 91);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 38);
-            this.textBox1.TabIndex = 10;
+            this.NombretextBox.Location = new System.Drawing.Point(94, 91);
+            this.NombretextBox.Multiline = true;
+            this.NombretextBox.Name = "NombretextBox";
+            this.NombretextBox.Size = new System.Drawing.Size(242, 38);
+            this.NombretextBox.TabIndex = 10;
             // 
-            // textBox2
+            // DirecciontextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(94, 141);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 41);
-            this.textBox2.TabIndex = 11;
+            this.DirecciontextBox.Location = new System.Drawing.Point(94, 141);
+            this.DirecciontextBox.Multiline = true;
+            this.DirecciontextBox.Name = "DirecciontextBox";
+            this.DirecciontextBox.Size = new System.Drawing.Size(242, 41);
+            this.DirecciontextBox.TabIndex = 11;
             // 
             // TelefonomaskedTextBox
             // 
@@ -191,13 +192,13 @@
             this.ClientSize = new System.Drawing.Size(357, 331);
             this.Controls.Add(this.CedulamaskedTextBox);
             this.Controls.Add(this.TelefonomaskedTextBox);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.DirecciontextBox);
+            this.Controls.Add(this.NombretextBox);
+            this.Controls.Add(this.PersonaIdnumericUpDown);
+            this.Controls.Add(this.Eliminarbutton);
+            this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -205,7 +206,7 @@
             this.Controls.Add(this.label1);
             this.Name = "rPersonas";
             this.Text = "Registro de Personas";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PersonaIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,13 +220,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Guardarbutton;
+        private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.NumericUpDown PersonaIdnumericUpDown;
+        private System.Windows.Forms.TextBox NombretextBox;
+        private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
         private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;

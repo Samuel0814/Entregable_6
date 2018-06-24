@@ -218,6 +218,7 @@
             this.MontotextBox.Name = "MontotextBox";
             this.MontotextBox.Size = new System.Drawing.Size(71, 20);
             this.MontotextBox.TabIndex = 26;
+            this.MontotextBox.TextChanged += new System.EventHandler(this.MontotextBox_TextChanged);
             // 
             // IDnumericUpDown
             // 
@@ -326,6 +327,7 @@
             this.BuscarArticulobutton.Text = "Buscar";
             this.BuscarArticulobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarArticulobutton.UseVisualStyleBackColor = true;
+            this.BuscarArticulobutton.Click += new System.EventHandler(this.BuscarArticulobutton_Click_1);
             // 
             // Consultabutton
             // 
@@ -338,6 +340,7 @@
             this.Consultabutton.Text = "Consulta";
             this.Consultabutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Consultabutton.UseVisualStyleBackColor = true;
+            this.Consultabutton.Click += new System.EventHandler(this.Consultabutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -389,7 +392,6 @@
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cCotizaciones
             // 

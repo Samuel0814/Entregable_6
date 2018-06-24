@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroArticulo.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,67 @@ namespace RegistroArticulo.UI.Registro
         public rArticulos()
         {
             InitializeComponent();
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            var articulo = BLL.ArticulosBLL.Buscar(Convert.ToInt32(ArticuloIdnumericUpDown.Value));
+            if (articulo != null)
+            {
+                PrecionumericUpDown.Value = articulo.Precio;
+                DescripciontextBox.Text = articulo.Descripcion;
+                CantidadCotizzadanumericUpDown.Text = articulo.CantidadCotizada.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No encontrado");
+            }
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            ArticuloIdnumericUpDown.Value = 0;
+            PrecionumericUpDown.Value = 0;
+            DescripciontextBox.Clear();
+            CantidadCotizzadanumericUpDown.Value = 0;
+        }
+
+        private void Guardarbutton_Click(object sender, EventArgs e)
+        {
+            Articulos articulo = LlenaClase();
+            if (ArticuloIdnumericUpDown.Value == 0)
+            {
+                if (BLL.ArticulosBLL.Guardar(articulo))
+                {
+                    MessageBox.Show("Guardado");
+                }
+            }
+            else
+            {
+                if (BLL.ArticulosBLL.Modificar(LlenaClase()))
+                {
+                    MessageBox.Show("Modificado");
+                }
+            }
+        }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            if(BLL.ArticulosBLL.Eliminar(Convert.ToInt32(ArticuloIdnumericUpDown.Value)))
+            {
+                MessageBox.Show("Eliminado");
+            }
+        }
+
+        private Articulos LlenaClase()
+        {
+            Articulos articulo = new Articulos();
+
+
+            articulo.Descripcion = DescripciontextBox.Text;
+            articulo.Precio = PrecionumericUpDown.Value;
+
+            return articulo;
         }
     }
 }

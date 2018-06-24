@@ -18,7 +18,7 @@ namespace RegistroArticulo.UI.Consultas
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Buscarbutton_Click(object sender, EventArgs e)
         {
             var cotizacion = BLL.CotizacionBLL.Buscar(Convert.ToInt32(IDnumericUpDown.Value));
             ComentariotextBox.Text = cotizacion.Comentario;
@@ -68,7 +68,22 @@ namespace RegistroArticulo.UI.Consultas
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+            Cotizaciones cotisar = LlenaClase();
 
+            if (IDnumericUpDown.Value == 0)
+            {
+                if (BLL.CotizacionBLL.Guardar(cotisar))
+                {
+                    MessageBox.Show("Guardado");
+                }
+            }
+            else
+            {
+                if (BLL.CotizacionBLL.Modificar(LlenaClase()))
+                {
+                    MessageBox.Show("Modificado");
+                }
+            }
         }
 
         private void cCotizaciones_Load(object sender, EventArgs e)
@@ -99,6 +114,30 @@ namespace RegistroArticulo.UI.Consultas
         }
 
         private void ArticuloIdnumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuscarArticulobutton_Click_1(object sender, EventArgs e)
+        {
+            var articulo = BLL.ArticulosBLL.Buscar(Convert.ToInt32(ArticuloIdnumericUpDown.Value));
+            if (articulo != null)
+            {
+                DescripciontextBox.Text = articulo.Descripcion;
+                PreciotextBox.Text = articulo.Precio.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No se encuentra");
+            }
+        }
+
+        private void Consultabutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MontotextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
