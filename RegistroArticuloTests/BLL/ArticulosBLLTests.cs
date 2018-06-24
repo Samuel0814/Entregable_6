@@ -14,39 +14,40 @@ namespace RegistroArticulo.BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            bool paso;
+            bool HayErrores;
             Articulos articulo = new Articulos();
-            articulo.ArticuloID = 0;
-            articulo.FechaVencimiento = Convert.ToDateTime(value: "05-12-2019");
-            articulo.Descripcion = "Jugo Manzana";
-            articulo.Existencia = 25;
-            articulo.CantidadCotizada = 20;
-            paso = BLL.ArticulosBLL.Guardar(articulo);
-            Assert.AreEqual(paso, true);
-            
+            articulo.ArticuloID = 10;
+            articulo.Descripcion = "Que tal";
+            articulo.Fecha = DateTime.Now;
+            articulo.Precio = 30;
+            articulo.Existencia = 6;
+            articulo.CantidadCotizada = 8;
+            HayErrores = BLL.ArticulosBLL.Guardar(articulo);
+            Assert.AreEqual(HayErrores, true);
+
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            bool paso;
-            paso = BLL.ArticulosBLL.Eliminar(2);
+            bool HayErrores;
+            HayErrores = BLL.ArticulosBLL.Eliminar(2);
 
-            Assert.AreEqual(paso, true);
+            Assert.AreEqual(HayErrores, true);
             
         }
 
         [TestMethod()]
         public void ModificarTest()
         {
-            bool paso;
+            bool HayErrores;
             Articulos articulo = new Articulos();
             articulo.ArticuloID = 5;
             articulo.Descripcion = "Jugo Manzana 300 Ml";
             articulo.Existencia = 30;
             articulo.CantidadCotizada = 20;
-            paso = BLL.ArticulosBLL.Modificar(articulo);
-            Assert.AreEqual(paso, true);
+            HayErrores = BLL.ArticulosBLL.Modificar(articulo);
+            Assert.AreEqual(HayErrores, true);
             
         }
 

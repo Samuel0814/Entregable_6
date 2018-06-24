@@ -42,21 +42,32 @@ namespace RegistroArticulo.UI.Registro
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            Articulos articulo = LlenaClase();
+            Articulos articulo;
+            bool HayErrores = true;
+
+            if (!Validar())
+            {
+                MessageBox.Show("Favor revisar todos los campos", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            articulo = LlenaClase();
+
+            //Determinar si es Guardar o Modificar
             if (ArticuloIdnumericUpDown.Value == 0)
-            {
-                if (BLL.ArticulosBLL.Guardar(articulo))
-                {
-                    MessageBox.Show("Guardado");
-                }
-            }
+                HayErrores = BLL.ArticulosBLL.Guardar(articulo);
             else
-            {
-                if (BLL.ArticulosBLL.Modificar(LlenaClase()))
-                {
-                    MessageBox.Show("Modificado");
-                }
-            }
+                //todo: validar que exista.
+                HayErrores = BLL.ArticulosBLL.Modificar(articulo);
+
+            //Informar el resultado
+            if (HayErrores)
+                MessageBox.Show("Guardado!!", "Exito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("No se pudo guardar!!", "Fallo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -80,17 +91,31 @@ namespace RegistroArticulo.UI.Registro
 
         private bool Validar()
         {
-            bool HayErrores = false;
+            bool HayErrores = true;
             //todo: quitar los mensajes de los errores que ya no estan.
 
             //todo: Validar que el nombre no se duplique
             if (String.IsNullOrWhiteSpace(DescripciontextBox.Text))
             {
                 MyerrorProvider.SetError(DescripciontextBox,
-                    "No debes dejar el nombre vacio");
-                HayErrores = true;
+                    "No debes dejar este campo vacio");
+                HayErrores = false;
             }
-
+            if (PrecionumericUpDown.Value == 0)
+            {
+                MyerrorProvider.SetError(PrecionumericUpDown, "No debe dejarlo el campo en 0");
+                HayErrores = false;
+            }
+            if (ExistencianumericUpDown.Value == 0)
+            {
+                MyerrorProvider.SetError(ExistencianumericUpDown, "No debe dejarlo el campo en 0");
+                HayErrores = false;
+            }
+            if (CantidadCotizzadanumericUpDown.Value == 0)
+            {
+                MyerrorProvider.SetError(CantidadCotizzadanumericUpDown, "No debe dejarlo el campo en 0");
+                HayErrores = false;
+            }
             //todo: validar demas campos
             return HayErrores;
         }
