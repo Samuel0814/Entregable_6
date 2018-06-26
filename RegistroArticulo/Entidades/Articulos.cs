@@ -12,11 +12,11 @@ namespace RegistroArticulo.Entidades
         public int ArticuloID { get; set; }
         public DateTime Fecha { get; set; }
         public string Descripcion { get; set; }
-        public decimal Precio { get; set; }
+        public int Precio { get; set; }
         public int Existencia { get; set; }
         public int CantidadCotizada { get; set; }
 
-        public Articulos(int articuloID, DateTime Fecha, string descripcion, decimal precio, int Existencia, int CantidadCotizada)
+        public Articulos(int articuloID, DateTime Fecha, string descripcion, int precio, int Existencia, int CantidadCotizada)
         {
             this.ArticuloID = articuloID;
             this.Fecha = Fecha;

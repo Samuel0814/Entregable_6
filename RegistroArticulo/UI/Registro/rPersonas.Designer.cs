@@ -98,6 +98,11 @@
             // PersonaIdnumericUpDown
             // 
             this.PersonaIdnumericUpDown.Location = new System.Drawing.Point(94, 36);
+            this.PersonaIdnumericUpDown.Maximum = new decimal(new int[] {
+            -1304428545,
+            434162106,
+            542,
+            0});
             this.PersonaIdnumericUpDown.Name = "PersonaIdnumericUpDown";
             this.PersonaIdnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.PersonaIdnumericUpDown.TabIndex = 0;

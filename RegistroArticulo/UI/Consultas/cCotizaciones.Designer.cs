@@ -49,12 +49,6 @@
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Importelabel = new System.Windows.Forms.Label();
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
-            this.ArticuloID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CotizacionedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuscarDetalllebutton = new System.Windows.Forms.Button();
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.BuscarArticulobutton = new System.Windows.Forms.Button();
@@ -63,6 +57,12 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.ArticuloID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CotizacionedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetallenumericUpDown)).BeginInit();
@@ -224,6 +224,11 @@
             // IDnumericUpDown
             // 
             this.IDnumericUpDown.Location = new System.Drawing.Point(76, 7);
+            this.IDnumericUpDown.Maximum = new decimal(new int[] {
+            -1304428545,
+            434162106,
+            542,
+            0});
             this.IDnumericUpDown.Name = "IDnumericUpDown";
             this.IDnumericUpDown.Size = new System.Drawing.Size(75, 20);
             this.IDnumericUpDown.TabIndex = 27;
@@ -253,44 +258,6 @@
             this.DetalledataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DetalledataGridView.Size = new System.Drawing.Size(517, 134);
             this.DetalledataGridView.TabIndex = 48;
-            // 
-            // ArticuloID
-            // 
-            this.ArticuloID.DataPropertyName = "ArticuloID";
-            this.ArticuloID.FillWeight = 70F;
-            this.ArticuloID.HeaderText = "Articulo ID";
-            this.ArticuloID.Name = "ArticuloID";
-            this.ArticuloID.Width = 70;
-            // 
-            // CotizacionedID
-            // 
-            this.CotizacionedID.DataPropertyName = "CotizacionesID";
-            this.CotizacionedID.HeaderText = "Cotizaciones ID";
-            this.CotizacionedID.Name = "CotizacionedID";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Importes
-            // 
-            this.Importes.DataPropertyName = "Importe";
-            this.Importes.HeaderText = "Importe";
-            this.Importes.Name = "Importes";
             // 
             // BuscarDetalllebutton
             // 
@@ -395,11 +362,49 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
             // 
+            // ArticuloID
+            // 
+            this.ArticuloID.DataPropertyName = "ArticuloID";
+            this.ArticuloID.FillWeight = 70F;
+            this.ArticuloID.HeaderText = "Articulo ID";
+            this.ArticuloID.Name = "ArticuloID";
+            this.ArticuloID.Width = 70;
+            // 
+            // CotizacionedID
+            // 
+            this.CotizacionedID.DataPropertyName = "CotizacionesID";
+            this.CotizacionedID.HeaderText = "Cotizaciones ID";
+            this.CotizacionedID.Name = "CotizacionedID";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // Importes
+            // 
+            this.Importes.DataPropertyName = "Importe";
+            this.Importes.HeaderText = "Importe";
+            this.Importes.Name = "Importes";
+            // 
             // cCotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 450);
+            this.ClientSize = new System.Drawing.Size(543, 450);
             this.Controls.Add(this.DetalledataGridView);
             this.Controls.Add(this.Importelabel);
             this.Controls.Add(this.BuscarDetalllebutton);

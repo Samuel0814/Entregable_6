@@ -36,7 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
-            this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ExistencianumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CantidadCotizzadanumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
@@ -46,11 +45,12 @@
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizzadanumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,6 +83,11 @@
             // ArticuloIdnumericUpDown
             // 
             this.ArticuloIdnumericUpDown.Location = new System.Drawing.Point(139, 34);
+            this.ArticuloIdnumericUpDown.Maximum = new decimal(new int[] {
+            -1304428545,
+            434162106,
+            542,
+            0});
             this.ArticuloIdnumericUpDown.Name = "ArticuloIdnumericUpDown";
             this.ArticuloIdnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.ArticuloIdnumericUpDown.TabIndex = 0;
@@ -113,16 +118,14 @@
             this.DescripciontextBox.Size = new System.Drawing.Size(221, 66);
             this.DescripciontextBox.TabIndex = 2;
             // 
-            // PrecionumericUpDown
-            // 
-            this.PrecionumericUpDown.Location = new System.Drawing.Point(139, 221);
-            this.PrecionumericUpDown.Name = "PrecionumericUpDown";
-            this.PrecionumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.PrecionumericUpDown.TabIndex = 3;
-            // 
             // ExistencianumericUpDown
             // 
             this.ExistencianumericUpDown.Location = new System.Drawing.Point(139, 270);
+            this.ExistencianumericUpDown.Maximum = new decimal(new int[] {
+            -1304428545,
+            434162106,
+            542,
+            0});
             this.ExistencianumericUpDown.Name = "ExistencianumericUpDown";
             this.ExistencianumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.ExistencianumericUpDown.TabIndex = 4;
@@ -130,6 +133,11 @@
             // CantidadCotizzadanumericUpDown
             // 
             this.CantidadCotizzadanumericUpDown.Location = new System.Drawing.Point(139, 313);
+            this.CantidadCotizzadanumericUpDown.Maximum = new decimal(new int[] {
+            -1304428545,
+            434162106,
+            542,
+            0});
             this.CantidadCotizzadanumericUpDown.Name = "CantidadCotizzadanumericUpDown";
             this.CantidadCotizzadanumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.CantidadCotizzadanumericUpDown.TabIndex = 5;
@@ -209,16 +217,29 @@
             this.FechadateTimePicker.TabIndex = 1;
             this.FechadateTimePicker.ValueChanged += new System.EventHandler(this.FechadateTimePicker_ValueChanged);
             // 
+            // PrecionumericUpDown
+            // 
+            this.PrecionumericUpDown.Location = new System.Drawing.Point(139, 220);
+            this.PrecionumericUpDown.Maximum = new decimal(new int[] {
+            -1304428545,
+            434162106,
+            542,
+            0});
+            this.PrecionumericUpDown.Name = "PrecionumericUpDown";
+            this.PrecionumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.PrecionumericUpDown.TabIndex = 16;
+            this.PrecionumericUpDown.ValueChanged += new System.EventHandler(this.PrecionumericUpDown_ValueChanged_1);
+            // 
             // rArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 450);
+            this.Controls.Add(this.PrecionumericUpDown);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CantidadCotizzadanumericUpDown);
             this.Controls.Add(this.ExistencianumericUpDown);
-            this.Controls.Add(this.PrecionumericUpDown);
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -234,10 +255,10 @@
             this.Text = "Registro de Articulos";
             this.Load += new System.EventHandler(this.rArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizzadanumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,11 +277,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox DescripciontextBox;
-        private System.Windows.Forms.NumericUpDown PrecionumericUpDown;
         private System.Windows.Forms.NumericUpDown ExistencianumericUpDown;
         private System.Windows.Forms.NumericUpDown CantidadCotizzadanumericUpDown;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        private System.Windows.Forms.NumericUpDown PrecionumericUpDown;
     }
 }

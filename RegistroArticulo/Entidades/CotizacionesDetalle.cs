@@ -14,7 +14,7 @@ namespace RegistroArticulo.Entidades
         public int CotizacionesID { get; set; }
         public int ArticuloID { get; set; }
         public int Cantidad { get; set; }
-        public decimal Precio { get; set; }
+        public int Precio { get; set; }
 
         //https://www.tektutorialshub.com/data-annotations-notmapped-attribute-in-entity-framework/
         //se aplica a esas propiedades, que no desea incluir en su tabla de base de datos. Este atributo
@@ -25,7 +25,7 @@ namespace RegistroArticulo.Entidades
         [NotMapped]
         public int Importe { get; set; }
 
-        public CotizacionesDetalle(int cotizacionesID, int articuloID, int cantidad, decimal precio, string descripcion, int importe)
+        public CotizacionesDetalle(int cotizacionesID, int articuloID, int cantidad, int precio, string descripcion, int importe)
         {
 
             this.CotizacionesID = cotizacionesID;

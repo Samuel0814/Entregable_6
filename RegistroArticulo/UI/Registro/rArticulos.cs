@@ -84,7 +84,7 @@ namespace RegistroArticulo.UI.Registro
 
 
             articulo.Descripcion = DescripciontextBox.Text;
-            articulo.Precio = PrecionumericUpDown.Value;
+            articulo.Precio = Convert.ToInt32(PrecionumericUpDown.Value);
 
             return articulo;
         }
@@ -126,6 +126,16 @@ namespace RegistroArticulo.UI.Registro
         }
 
         private void FechadateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrecionumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrecionumericUpDown_ValueChanged_1(object sender, EventArgs e)
         {
 
         }

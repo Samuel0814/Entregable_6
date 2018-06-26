@@ -95,7 +95,7 @@ namespace RegistroArticulo.UI.Consultas
         {
 
             cotisar.Comentario = ComentariotextBox.Text;
-            cotisar.Monto += BLL.CotizacionBLL.calcularMonto(Convert.ToDecimal(PreciotextBox.Text), CantidadnumericUpDown.Value);
+            cotisar.Monto += BLL.CotizacionBLL.calcularMonto(Convert.ToInt32(PreciotextBox.Text), CantidadnumericUpDown.Value);
             cotisar.Fecha = FechadateTimePicker.Value;
             return cotisar;
         }
@@ -110,7 +110,7 @@ namespace RegistroArticulo.UI.Consultas
 
         private void CantidadnumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            ImportetextBox.Text = BLL.CotizacionBLL.calcularMonto(Convert.ToDecimal(PreciotextBox.Text), CantidadnumericUpDown.Value).ToString();
+            ImportetextBox.Text = BLL.CotizacionBLL.calcularMonto(Convert.ToInt32(PreciotextBox.Text), CantidadnumericUpDown.Value).ToString();
         }
 
         private void ArticuloIdnumericUpDown_ValueChanged(object sender, EventArgs e)
