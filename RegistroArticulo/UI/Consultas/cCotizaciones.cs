@@ -150,5 +150,10 @@ namespace RegistroArticulo.UI.Consultas
             FechadateTimePicker.Value = cotizacion.Fecha;
             DetalledataGridView.DataSource = cotizacion.CotizacionDetalle;
         }
+
+        private void ImportetextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

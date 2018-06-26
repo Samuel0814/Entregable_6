@@ -49,6 +49,12 @@
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Importelabel = new System.Windows.Forms.Label();
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
+            this.ArticuloID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CotizacionedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuscarDetalllebutton = new System.Windows.Forms.Button();
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.BuscarArticulobutton = new System.Windows.Forms.Button();
@@ -57,12 +63,6 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.ArticuloID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CotizacionedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetallenumericUpDown)).BeginInit();
@@ -73,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -83,7 +83,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(228, 9);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(252, 12);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(114, 20);
             this.FechadateTimePicker.TabIndex = 7;
@@ -91,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(182, 9);
+            this.label2.Location = new System.Drawing.Point(209, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 8;
@@ -111,7 +111,7 @@
             this.ComentariotextBox.Location = new System.Drawing.Point(76, 42);
             this.ComentariotextBox.Multiline = true;
             this.ComentariotextBox.Name = "ComentariotextBox";
-            this.ComentariotextBox.Size = new System.Drawing.Size(266, 91);
+            this.ComentariotextBox.Size = new System.Drawing.Size(379, 91);
             this.ComentariotextBox.TabIndex = 10;
             // 
             // label4
@@ -167,22 +167,23 @@
             // 
             // ImportetextBox
             // 
-            this.ImportetextBox.Location = new System.Drawing.Point(461, 223);
+            this.ImportetextBox.Location = new System.Drawing.Point(506, 219);
             this.ImportetextBox.Name = "ImportetextBox";
-            this.ImportetextBox.Size = new System.Drawing.Size(71, 20);
+            this.ImportetextBox.Size = new System.Drawing.Size(122, 20);
             this.ImportetextBox.TabIndex = 19;
+            this.ImportetextBox.TextChanged += new System.EventHandler(this.ImportetextBox_TextChanged);
             // 
             // PreciotextBox
             // 
-            this.PreciotextBox.Location = new System.Drawing.Point(461, 168);
+            this.PreciotextBox.Location = new System.Drawing.Point(506, 168);
             this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.Size = new System.Drawing.Size(71, 20);
+            this.PreciotextBox.Size = new System.Drawing.Size(122, 20);
             this.PreciotextBox.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(483, 142);
+            this.label7.Location = new System.Drawing.Point(463, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 21;
@@ -207,7 +208,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(418, 397);
+            this.label9.Location = new System.Drawing.Point(514, 397);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 25;
@@ -215,7 +216,7 @@
             // 
             // MontotextBox
             // 
-            this.MontotextBox.Location = new System.Drawing.Point(461, 397);
+            this.MontotextBox.Location = new System.Drawing.Point(557, 394);
             this.MontotextBox.Name = "MontotextBox";
             this.MontotextBox.Size = new System.Drawing.Size(71, 20);
             this.MontotextBox.TabIndex = 26;
@@ -223,7 +224,7 @@
             // 
             // IDnumericUpDown
             // 
-            this.IDnumericUpDown.Location = new System.Drawing.Point(76, 7);
+            this.IDnumericUpDown.Location = new System.Drawing.Point(76, 12);
             this.IDnumericUpDown.Maximum = new decimal(new int[] {
             -1304428545,
             434162106,
@@ -236,7 +237,7 @@
             // Importelabel
             // 
             this.Importelabel.AutoSize = true;
-            this.Importelabel.Location = new System.Drawing.Point(478, 195);
+            this.Importelabel.Location = new System.Drawing.Point(458, 219);
             this.Importelabel.Name = "Importelabel";
             this.Importelabel.Size = new System.Drawing.Size(42, 13);
             this.Importelabel.TabIndex = 29;
@@ -256,8 +257,46 @@
             this.DetalledataGridView.Location = new System.Drawing.Point(15, 249);
             this.DetalledataGridView.Name = "DetalledataGridView";
             this.DetalledataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DetalledataGridView.Size = new System.Drawing.Size(517, 134);
+            this.DetalledataGridView.Size = new System.Drawing.Size(613, 134);
             this.DetalledataGridView.TabIndex = 48;
+            // 
+            // ArticuloID
+            // 
+            this.ArticuloID.DataPropertyName = "ArticuloID";
+            this.ArticuloID.FillWeight = 70F;
+            this.ArticuloID.HeaderText = "Articulo ID";
+            this.ArticuloID.Name = "ArticuloID";
+            this.ArticuloID.Width = 70;
+            // 
+            // CotizacionedID
+            // 
+            this.CotizacionedID.DataPropertyName = "CotizacionesID";
+            this.CotizacionedID.HeaderText = "Cotizaciones ID";
+            this.CotizacionedID.Name = "CotizacionedID";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // Importes
+            // 
+            this.Importes.DataPropertyName = "Importe";
+            this.Importes.HeaderText = "Importe";
+            this.Importes.Name = "Importes";
             // 
             // BuscarDetalllebutton
             // 
@@ -301,7 +340,7 @@
             // 
             this.Consultabutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Query_32;
             this.Consultabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Consultabutton.Location = new System.Drawing.Point(328, 397);
+            this.Consultabutton.Location = new System.Drawing.Point(403, 397);
             this.Consultabutton.Name = "Consultabutton";
             this.Consultabutton.Size = new System.Drawing.Size(84, 46);
             this.Consultabutton.TabIndex = 5;
@@ -314,7 +353,7 @@
             // 
             this.Eliminarbutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Delete_File_32;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminarbutton.Location = new System.Drawing.Point(225, 397);
+            this.Eliminarbutton.Location = new System.Drawing.Point(283, 397);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(84, 46);
             this.Eliminarbutton.TabIndex = 4;
@@ -327,7 +366,7 @@
             // 
             this.Guardarbutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Save_All_32;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(119, 397);
+            this.Guardarbutton.Location = new System.Drawing.Point(146, 397);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(84, 46);
             this.Guardarbutton.TabIndex = 3;
@@ -340,7 +379,7 @@
             // 
             this.Nuevobutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Create_32;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevobutton.Location = new System.Drawing.Point(15, 394);
+            this.Nuevobutton.Location = new System.Drawing.Point(15, 397);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(84, 48);
             this.Nuevobutton.TabIndex = 2;
@@ -353,58 +392,20 @@
             // 
             this.Buscarbutton.Image = global::RegistroArticulo.Properties.Resources.icons8_Search_Property_32;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(436, 12);
+            this.Buscarbutton.Location = new System.Drawing.Point(538, 42);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(84, 46);
+            this.Buscarbutton.Size = new System.Drawing.Size(90, 50);
             this.Buscarbutton.TabIndex = 1;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
             // 
-            // ArticuloID
-            // 
-            this.ArticuloID.DataPropertyName = "ArticuloID";
-            this.ArticuloID.FillWeight = 70F;
-            this.ArticuloID.HeaderText = "Articulo ID";
-            this.ArticuloID.Name = "ArticuloID";
-            this.ArticuloID.Width = 70;
-            // 
-            // CotizacionedID
-            // 
-            this.CotizacionedID.DataPropertyName = "CotizacionesID";
-            this.CotizacionedID.HeaderText = "Cotizaciones ID";
-            this.CotizacionedID.Name = "CotizacionedID";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Importes
-            // 
-            this.Importes.DataPropertyName = "Importe";
-            this.Importes.HeaderText = "Importe";
-            this.Importes.Name = "Importes";
-            // 
             // cCotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 450);
+            this.ClientSize = new System.Drawing.Size(709, 450);
             this.Controls.Add(this.DetalledataGridView);
             this.Controls.Add(this.Importelabel);
             this.Controls.Add(this.BuscarDetalllebutton);
